@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcard Quiz App</h1>
+        <button id="add-card-btn">Add Flashcard</button>
+        <button id="start-quiz-btn">Start Quiz</button>
+        <div id="flashcard-container"></div>
+    </div>
+
+    <!-- Add Flashcard Modal -->
+    <div id="add-flashcard-modal">
+        <input type="text" id="question-input" placeholder="Enter question">
+        <input type="text" id="answer-input" placeholder="Enter answer">
+        <button id="save-flashcard">Save</button>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
