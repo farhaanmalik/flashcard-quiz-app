@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const addCardBtn = document.getElementById("add-card-btn");
     const modal = document.getElementById("add-flashcard-modal");
     const saveFlashcardBtn = document.getElementById("save-flashcard");
+    const cancelFlashcardBtn = document.getElementById("cancel-flashcard");
 
     function renderFlashcards() {
         flashcardContainer.innerHTML = "";
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             div.classList.add("flashcard");
             div.innerHTML = `
             <strong>${card.question}</strong>
-            <button class="delete-btn" data-index="${index}">❌</button>
+            <button class="delete-btn" data-index="${index}">Remove</button>
             `;
             div.addEventListener("click", (event) => {
                 if (!event.target.classList.contains("delete-btn")) {
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     addCardBtn.addEventListener("click", () => modal.style.display = "block");
+    cancelFlashcardBtn.addEventListener("click", () => modal.style.display = "none");
 
     saveFlashcardBtn.addEventListener("click", () => {
         const question = document.getElementById("question-input").value;
